@@ -1,5 +1,9 @@
+// ----- FUN FACTS SCRIPT
+// Dear reader, I felt very smart here because I refactored the code twice, first to prevent consecutive repeats of the same fact and then again to make sure all facts are shown once before cycling #codingIsFun
 
-const funFacts = [
+// Define variables (outside of function)
+var usedFacts = [];
+const FUNFACTS = [
     "Ben once participated in a racing driver talent show. He did not win and so did not retire to a yacht in Monaco.",
     "Whilst volunteering in Fiji, he came face-to-face with an eagle whilst on the toilet.",
     "Ben once had a singing lesson with Pavarotti's voice coach, who concluded that Ben \"could not sing\"",
@@ -14,22 +18,51 @@ const funFacts = [
     "Ben once made a board game called 'Pitcoin', which can be bought at no good retailers"
 ]
 
-var currentFunFact = "";
-
-// Pulls a random quote from a list a returns to website
+// Function occurs on click of 'fun-facts-button' in HTML document
 function generateFunFact () {
-    
-    //Generate random number (.floor ensures < arr.length)
-    let i = Math.floor(Math.random() * funFacts.length);
-    
-    // Assign fact into variable
-    var newFunFact = funFacts[i];
-
-    // This makes sure that facts aren't repeated
-    if (newFunFact !== currentFunFact) {
-        document.getElementById("fun-fact").innerHTML = newFunFact;
-        currentFunFact = newFunFact;
-    } else {
-        generateFunFact();
+ 
+    // Checks whether all facts have been used previously used and resets if true to prevent repeat or loop
+    if (usedFacts.length === FUNFACTS.length) {
+        usedFacts = []; 
     }
+
+    // Generate random number (.floor ensures < arr.length)
+    let i = Math.floor(Math.random() * FUNFACTS.length);
+
+    // Check whether fact has been used this cycle and if not, push to website and tick up. If true, try again
+    if (usedFacts.includes(i)) {
+        generateFunFact();
+    } else {
+        var newFunFact = FUNFACTS[i];
+        document.getElementById("fun-fact").innerHTML = newFunFact;
+        usedFacts.push(i);
+    }
+}
+
+
+
+
+// ----- PORTFOLIO MODAL (but may be used in portfolio later)
+
+const PROJECTINFO = {
+    name: [
+        "CERN Digital Inspection Tool",
+        "Stampede: Racing Royale",
+        "High Speed 2"
+    ],
+    role: [
+        "Product Manager",
+        "Operations Manager",
+        "Design Lead"
+    ],
+    description: [
+        "blahblahblah",
+        "blahblahblah",
+        "blahblahblah"
+    ],
+    image: [
+        "./images/CERN.jpg",
+        "./images/stampede.jpg",
+        "./images/hs2.jpg"
+    ]
 }
