@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ben Swatton">
+        <meta name="keywords" content="HTML, CSS, JavaScript, career, founders and coders, superstar">
+        
+        <title>Ben Swatton - FAC</title>
+        <link rel="icon" type="image/x-icon" href=""> <!-- Need to add favicon -->
+        
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    
+    <body>
+        <!-- HEADER -->
+        <header>
+            <div id="logo">benswatton.</div>
+            <nav id="navbar">
+                <ul>
+                    <a href="#about-me" class="nav-link"><li>About Me</li></a>
+                    <a href="#portfolio" class="nav-link"><li>Portfolio</li></a>
+                    <a href="#fun-facts" class="nav-link"><li>Fun Facts</li></a>
+                </ul>
+            </nav>
+            <div id="links">
+                <a href="https://github.com/trubwick" target="_blank"><img class="logos" src="./images/github-mark-white.png" alt="github logo"></a> 
+                <a href="https://www.linkedin.com/in/benswatton" target="_blank"><img class="logos" src="./images/linkedin.png" alt="linkedin logo"></a>
+                <a href="https://www.freecodecamp.org/trubwick" target="_blank"><img class="logos" src="./images/fcc.png" alt="freecodecamp logo"></a>
+            </div>
+        </header>
+        
+        <!-- MAIN SECTION -->
+        <main>
+            <div class="content" id="intro-section">
+                <div id="title">
+                    <h1>hello world,
+                    <br>I'm </nr><span id="emphasis">Ben Swatton</span>.</h1>
+                    </div>
+
+                <div id="profile-pic">
+                    <img class="profile-img" alt="profile pic" src="./images/profile.jpg">
+                </div>
+            </div>
+
+            <div class="content" id="main-body">
+                <section id="about-me">
+                    <h2>About Me</h2>
+                    <p>Brewer, gamer, engineer</p>
+                    <h2>Why become a web developer?</h2>
+                    <p></p>
+                </section>
+            
+            </div>
+
+            <!-- PORTFOLIO -->
+            <!-- This could be moved in to a .js using objects, etc. to improve workflow -->
+            <div class="content" id="portfolio">
+                
+                <div id="portfolio-title"><h2>Portfolio</p></div>
+                <!-- consider adding MODAL to make it interesting -->
+                <div class="project-container">
+                    <div class="project-title"><span class="project-name">CERN Digital Inspection Tool</span>
+                        <br><span class="project-role">Product Manager</span></div>
+                    <div class="project-img"><img src="./images/CERN.JPG" alt="project image"></div>
+                </div>
+                <div class="project-container">
+                    <div class="project-title"><span class="project-name">Stampede: Racing Royale</span>
+                        <br><span class="project-role">Operations Manager</span></div>
+                    <div class="project-img"><img src="./images/stampede.jpg" alt="project image"></div>
+                </div>
+                <div class="project-container">
+                    <div class="project-title"><span class="project-name">High Speed 2</span>
+                        <br><span class="project-role">Design Lead</span></div>
+                    <div class="project-img"><img src="./images/hs2.jpg"></div>
+                </div>
+                
+            </div>
+
+            <div class="content" id="fun-facts">
+                <div><button id="fun-fact-button" onclick="generateFunFact()">New Fact</button></div>
+                <div><p><span id="fun-fact"><em>Press the button to generate a "fun" fact</em></span></p></div>
+            </div>
+        </main>
+        
+        <!-- FOOTER-->
+        <footer>
+            Contact me - TBC
+        </footer>
+    </body>
+
+</html>
