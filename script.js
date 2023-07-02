@@ -56,9 +56,9 @@ const PROJECTINFO = {
         "Design Lead"
     ],
     description: [
-        "blahblahblah",
-        "blahblahblah",
-        "blahblahblah"
+        "With over 60km of tunnels, shafts and caverns to inspect, Ben developed an innovative new mobile app that allowed engineers to record cracks, water ingress and other photos directly into CERN's geographic information system. Location tracking and the ability to attached photos cut inspection times by 50% and made inspection data more accessible. <br><br>The tagged images were used in training a computer vision algorithm to develop automated tunnel inspections, meaning that no humans needed to enter radioactive underground environments.",
+        "Stampede: Racing Royale is a chaotic 60-player battle royale karting game from the racing experts at Sumo Leamington - think Mario Kart + Fall Guys.<br><br>Part of the leadership team of start-up video game publisher, Secret Mode, Ben was responsibile for the project management of the internally-developed titles, including QA, production, localisation and organising play testing.",
+        "As a chartered engineer, Ben led a team of up to 100 engineers, planners and designers to deliver the detailed design of the central London of High Speed 2 as part of a design and build joint venture."
     ],
     image: [
         "./images/CERN.jpg",
