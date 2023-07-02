@@ -72,17 +72,17 @@
                 
                 <div id="portfolio-title"><h2>Portfolio</p></div>
                 <!-- consider adding MODAL to make it interesting -->
-                <div class="project-container">
+                <div class="project-container" onclick="openModal(0)">
                     <div class="project-title"><span class="project-name">CERN Digital Inspection Tool</span>
                         <br><span class="project-role">Product Manager</span></div>
                     <div class="project-img"><img src="./images/CERN.JPG" alt="project image"></div>
                 </div>
-                <div class="project-container">
+                <div class="project-container" onclick="openModal(1)">
                     <div class="project-title"><span class="project-name">Stampede: Racing Royale</span>
                         <br><span class="project-role">Operations Manager</span></div>
                     <div class="project-img"><img src="./images/stampede.jpg" alt="project image"></div>
                 </div>
-                <div class="project-container">
+                <div class="project-container" onclick="openModal(2)">
                     <div class="project-title"><span class="project-name">High Speed 2</span>
                         <br><span class="project-role">Design Lead</span></div>
                     <div class="project-img"><img src="./images/hs2.jpg"></div>
@@ -95,6 +95,17 @@
                 <div><p><span id="fun-fact"><em>Press the button to generate a "fun" fact</em></span></p></div>
             </div>
         </main>
+
+        <!-- MODAL -->
+        <div id="testModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span> <!-- X sign -->
+                <div id="modal-title">Job Title</div>
+                <div id="modal-subtitle"><span class="project-role">Role Title</span></div>
+                <div id="modal-description"><p>A long description</p></div>
+                <div id="modal-img"></div>
+            </div>
+        </div>
         
         <!-- FOOTER-->
         <footer>

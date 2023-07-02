@@ -66,3 +66,33 @@ const PROJECTINFO = {
         "./images/hs2.jpg"
     ]
 }
+
+
+// !! Need to re-do this - getElementById outside functions works too quickly and can't find modal - when to call in HTML? For now, call in each function works
+
+
+
+// When the user clicks on the project, open the modal
+function openModal(projectID) {
+    var modal = document.getElementById("testModal");
+    modal.style.display = "block";
+    document.getElementById("modal-title").innerHTML = PROJECTINFO.name[projectID];
+    document.getElementById("modal-subtitle").innerHTML = PROJECTINFO.role[projectID];
+    document.getElementById("modal-description").innerHTML = PROJECTINFO.description[projectID];
+    document.getElementById("modal-img").innerHTML = "<img src=\"" + PROJECTINFO.image[projectID] + "\">";
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeModal() {
+    var modal = document.getElementById("testModal");
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+
+window.onclick = function(event) {
+    var modal = document.getElementById("testModal");
+    if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
